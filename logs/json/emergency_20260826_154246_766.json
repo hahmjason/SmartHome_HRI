@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-08-26T15:42:46.766722",
+  "fsm_state": "EMERGENCY",
+  "latency_ms": 0.01,
+  "inference_source": "0ms_FreeRTOS_Interrupt",
+  "input_context": {
+    "user_voice": "Play some relaxing music",
+    "sensors": {
+      "indoor_temp": 32.0,
+      "outdoor_temp": 4.0,
+      "indoor_humidity": 45.0,
+      "outdoor_humidity": 45.0,
+      "lux": 10.0,
+      "smoke_level": 85,
+      "soil_moisture": 45,
+      "air_quality": "Good",
+      "weather": "Clear",
+      "time_str": "20:00",
+      "user_present": true,
+      "user_state": "RESTING"
+    }
+  },
+  "ai_thinking_process": {
+    "human_state_simulation": "Critical hazard detected. Immediate risk of smoke inhalation and asphyxiation.",
+    "physical_reasoning": "Toxic combustion gas density rising rapidly. 0ms preemption bypasses LLM to evacuate smoke and unlock escape path.",
+    "reason_code": "CRITICAL_SMOKE_FIRE_DETECTED"
+  },
+  "actuation_decision": {
+    "action_type": "FAIL_SAFE_EMERGENCY",
+    "target_device": "DUCT_FAN",
+    "device_param": 100,
+    "voice_response": "Emergency warning: Smoke detected. Max ventilation activated, windows opened, door unlocked."
+  }
+}

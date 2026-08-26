@@ -1,0 +1,6 @@
+root ::= "{" ws "\"human_state_simulation\":" ws string_val "," ws "\"physical_reasoning\":" ws string_val "," ws "\"action_type\":" ws action_val "," ws "\"target_device\":" ws device_val "," ws "\"device_param\":" ws [0-9]+ "," ws "\"reason\":" ws string_val "," ws "\"voice_response\":" ws string_val "}"
+
+action_val ::= "\"DETOUR_BYPASS\"" | "\"PROACTIVE_SUGGEST\"" | "\"EXECUTE_ORIGINAL\"" | "\"FAIL_SAFE_EMERGENCY\"" | "\"BACKGROUND_AUTONOMOUS\""
+device_val ::= "\"WINDOW\"" | "\"DUCT_FAN\"" | "\"HEATER\"" | "\"AIR_PURIFIER\"" | "\"LIGHT_DIMMER\"" | "\"WATER_PUMP\"" | "\"HAPTIC_MOTOR\"" | "\"NONE\""
+string_val ::= "\"" [^"\\]* "\""
+ws ::= [ \t\n\r]*
